@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def configurations(request):
     return render(request, 'configurations/configurations.html', {})
+
+
+def standard(request):
+    return render(request, 'configurations/standard.html', {})

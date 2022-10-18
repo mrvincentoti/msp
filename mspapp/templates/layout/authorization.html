@@ -57,15 +57,17 @@
       rel="stylesheet"
       href="{% static 'authorization/css/app-light.css' %}"
       id="lightTheme"
-      disabled
     />
+    {% comment %}
     <link
       rel="stylesheet"
       href="{% static 'authorization/css/app-dark.css' %}"
       id="darkTheme"
+      disabled
     />
+    {% endcomment %}
   </head>
-  <body class="vertical dark">
+  <body class="vertical light">
     <div class="wrapper">
       {% block body %} {% endblock %}
       <!-- .container-fluid -->

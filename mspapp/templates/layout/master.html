@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link rel="icon" href="favicon.ico" />
-    <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+    <title>MSP APP - Analytics</title>
     <!-- Simple bar CSS -->
     <link
       rel="stylesheet"
@@ -60,15 +60,15 @@
       rel="stylesheet"
       href="{% static 'authorization/css/app-light.css' %}"
       id="lightTheme"
-      disabled
     />
     <link
       rel="stylesheet"
       href="{% static 'authorization/css/app-dark.css' %}"
       id="darkTheme"
+      disabled
     />
   </head>
-  <body class="vertical dark">
+  <body class="vertical light">
     <div class="wrapper">
       <nav class="topnav navbar navbar-light">
         <button
@@ -77,14 +77,6 @@
         >
           <i class="fe fe-menu navbar-toggler-icon"></i>
         </button>
-        <form class="form-inline mr-auto searchform text-muted">
-          <input
-            class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted"
-            type="search"
-            placeholder="Type something..."
-            aria-label="Search"
-          />
-        </form>
         <ul class="nav">
           <li class="nav-item">
             <a
@@ -129,7 +121,7 @@
             >
               <span class="avatar avatar-sm mt-2">
                 <img
-                  src="./assets/avatars/face-1.jpg"
+                  src="{% static 'authorization/assets/avatars/face-1.jpg' %}"
                   alt="..."
                   class="avatar-img rounded-circle"
                 />

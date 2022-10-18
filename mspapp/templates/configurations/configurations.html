@@ -1,3 +1,243 @@
 {% extends 'layout/master.html' %} {% load static %} {% block body %}
-<p>testing</p>
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="h5 page-title"><i class="fe fe-tool"></i> Configurations</h2>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Create planning year</h6>
+                    <p class="small text-muted mb-0 text-danger">
+                      <i class="fe fe-alert-triangle text-danger"></i>
+                      Create planning year(s) for MSP computation over the
+                      period specified.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input
+                        class="form-control form-control-md"
+                        type="text"
+                        placeholder="2021-2022"
+                      />
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Create fiscal budget</h6>
+                    <p class="small text-muted mb-0 text-danger">
+                      <i class="fe fe-alert-triangle text-danger"></i>
+                      Create budget for the current planning year.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input
+                        class="form-control form-control-md"
+                        type="number"
+                        placeholder="7000000000"
+                      />
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+        </div>
+      </div>
+      <!---/end column-->
+      <div class="col-4">
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Create state</h6>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input
+                        class="form-control form-control-md"
+                        type="text"
+                        placeholder="2021-2022"
+                      />
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Create LGA</h6>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group mb-3">
+                      <label for="example-select">Select State</label>
+                      <select class="form-control" id="example-select">
+                        <option>Ogun</option>
+                        <option>Cross River</option>
+                        <option>Abia</option>
+                        <option>Sokoto</option>
+                        <option>Kaduna</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control form-control-md"
+                        type="text"
+                        placeholder="Obanliku"
+                      />
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Create Ward</h6>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group mb-3">
+                      <label for="example-select">Select State</label>
+                      <select class="form-control" id="example-select">
+                        <option>Ogun</option>
+                        <option>Cross River</option>
+                        <option>Abia</option>
+                        <option>Sokoto</option>
+                        <option>Kaduna</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="example-select">Select LGA</label>
+                      <select class="form-control" id="example-select">
+                        <option>Becheve</option>
+                        <option>Orlu</option>
+                        <option>Abia</option>
+                        <option>Sokoto</option>
+                        <option>Kaduna</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control form-control-md"
+                        type="text"
+                        placeholder="Obanliku"
+                      />
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+        </div>
+      </div>
+      <!---/end column-->
+      <div class="col-4">
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 mb-3">
+                    <h6 class="card-title mb-1">Assign State</h6>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group mb-3">
+                      <label for="example-select">Select State</label>
+                      <select class="form-control" id="example-select">
+                        <option>Ogun</option>
+                        <option>Cross River</option>
+                        <option>Abia</option>
+                        <option>Sokoto</option>
+                        <option>Kaduna</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="example-select">Select User</label>
+                      <select class="form-control" id="example-select">
+                        <option>Vincent Oti</option>
+                        <option>Mark Nku</option>
+                        <option>John Doe</option>
+                        <option>Mark Spenser</option>
+                        <option>Jim kim</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn mb-2 btn-outline-primary">
+                      <span class="fe fe-check fe-16 mr-2"></span>Create
+                    </button>
+                  </div>
+                </div>
+                <!-- /. row -->
+              </div>
+              <!-- /. card-body -->
+            </div>
+            <!-- /. card -->
+          </div>
+          <!-- /. col -->
+        </div>
+      </div>
+      <!---/end column-->
+    </div>
+  </div>
+</main>
 {%endblock %}
