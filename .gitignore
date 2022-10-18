@@ -1,0 +1,3 @@
+mspenv
+mspapp/.env
+mspapp/__pycache__/*
