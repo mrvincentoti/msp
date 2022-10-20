@@ -1,11 +1,17 @@
-{% extends 'layout/authorization.html' %} {% load static %} {% block body %}
+{% extends 'layout/authorizations.html' %} 
+{% load static %} 
+<!DOCTYPE html>
+<html
+{% block body %}
+
 
 <div class="wrapper vh-100">
   <div class="row align-items-center h-100" style="margin: 0px !important">
-    <form class="col-lg-3 col-md-4 col-10 mx-auto text-center">
+    <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" id="formAuthentication" action="{% url 'dashboard' %}" method="POST">
+      {% csrf_token %}
       <a
         class="navbar-brand mx-auto mt-2 flex-fill text-center"
-        href="./index.html"
+       
       >
         <svg
           version="1.1"
@@ -55,9 +61,11 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Let me in
       </button>
+      <p>Dont have an account??</p><br>
+      <a href = "{% url 'signup' %}"><h4>SignUp Here</h4></a>
       <p class="mt-5 mb-3 text-muted">© 2020</p>
     </form>
   </div>
 </div>
 
-{% endblock %}
+{% endblock body %}
