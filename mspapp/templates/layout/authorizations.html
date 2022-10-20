@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link rel="icon" href="favicon.ico" />
-    <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+    <title>MSP Dashboard</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="css/simplebar.css" />
     <!-- Fonts CSS -->
@@ -67,7 +67,9 @@
   </head>
   <body class="vertical dark">
     <div class="wrapper">
-      {% block body %} {% endblock %}
+      {% block body %} 
+      
+      {% endblock body %}
       <!-- .container-fluid -->
       <div
         class="modal fade modal-notif modal-slide"
@@ -258,6 +260,7 @@
         </div>
       </div>
     </div>
+    
     <!-- .wrapper -->
     <script src="{% static 'authorization/js/jquery.min.js' %}"></script>
     <script src="{% static 'authorization/js/popper.min.js' %}"></script>
