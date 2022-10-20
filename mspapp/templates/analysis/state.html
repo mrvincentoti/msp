@@ -1,0 +1,258 @@
+{% extends 'layout/master.html' %} {% load static %} {% block body %}
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="page-title"><i class="fe fe-tool"></i>State Analysis</h2>
+        <hr />
+      </div>
+      <div class="col-12">
+        <div class="card shadow">
+          <div class="card-body">
+            <div class="toolbar row mb-3">
+              <div class="col">
+                <form class="form-inline">
+                  <div class="form-row">
+                    <div class="form-group col-auto">
+                      <label for="search" class="sr-only">Search</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="search"
+                        value=""
+                        placeholder="Search"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr role="row">
+                  <th>ID</th>
+                  <th>State Name</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Cross River</td>
+                  <td>2020-07-14 17:18:27</td>
+                  <td>
+                    <span class="badge badge-pill badge-warning"
+                      >Incomplete data</span
+                    >
+                  </td>
+                  <td class="text-right">
+                    <button
+                      href="{% url 'state-result' %}"
+                      type="button"
+                      class="btn mb-2 btn-outline-secondary"
+                      disabled
+                    >
+                      <i class="fe fe-eye-off"></i>Analyze
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Kanu</td>
+                  <td>2020-07-14 17:18:27</td>
+                  <td>
+                    <span class="badge badge-pill badge-success"
+                      >Data Complete</span
+                    >
+                  </td>
+                  <td class="text-right">
+                    <a
+                      href="{% url 'state-result' %}"
+                      type="button"
+                      class="btn mb-2 btn-outline-success"
+                    >
+                      <i class="fe fe-eye"></i>Analyze All
+                    </a>
+                    <a
+                      type="button"
+                      class="accordion-toggle collapsed btn mb-2 btn-outline-success"
+                      id="c-2474"
+                      data-toggle="collapse"
+                      data-parent="#c-2474"
+                      href="#collap-2474"
+                    >
+                      <i class="fe fe-eye"></i>Select LGA
+                    </a>
+                  </td>
+                </tr>
+                <tr id="collap-2474" class="collapse in p-3 bg-light">
+                  <td colspan="5">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <p class="mb-2"><strong>Add LGA to analysis</strong></p>
+                        <form action="stateoutput/" method="post">
+                          {% csrf_token %}
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox1"
+                              value="option1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox1"
+                              >Wudil</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox2"
+                              >Tofa</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Takai</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Rogo</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Rano</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Nasarawa</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Kibiya</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Gwale</label
+                            >
+                          </div>
+                          <hr />
+                          <div class="row">
+                            <div class="col-md-12 mt-3">
+                              <button
+                                type="butsubmitton"
+                                class="btn mb-2 btn-outline-primary"
+                              >
+                                <span class="fe fe-activity fe-16 mr-2"></span>
+                                Start Analysis
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Sokoto</td>
+                  <td>2020-07-14 17:18:27</td>
+                  <td>
+                    <span class="badge badge-pill badge-danger">No Data</span>
+                  </td>
+                  <td class="text-right">
+                    <button
+                      href="{% url 'state-result' %}"
+                      type="button"
+                      class="btn mb-2 btn-outline-danger"
+                      disabled
+                    >
+                      <i class="fe fe-eye-off"></i>Analyze
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav aria-label="Table Paging" class="mb-0 text-muted">
+              <ul class="pagination justify-content-end mb-0">
+                <li class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

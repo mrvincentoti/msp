@@ -1,0 +1,97 @@
+{% extends 'layout/master.html' %} {% load static %} {% block body %}
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="page-title"><i class="fe fe-tool"></i>Manage State</h2>
+        <hr />
+      </div>
+      <div class="col-12">
+        <div class="card shadow">
+          <div class="card-body">
+            <div class="toolbar row mb-3">
+              <div class="col">
+                <form class="form-inline">
+                  <div class="form-row">
+                    <div class="form-group col-auto">
+                      <label for="search" class="sr-only">Search</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="search"
+                        value=""
+                        placeholder="Search"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col ml-auto">
+                <div class="dropdown float-right">
+                  <button
+                    class="btn btn-primary float-right ml-3"
+                    type="button"
+                  >
+                    Add LGA +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr role="row">
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="group" class="bg-light">
+                  <td colspan="10">
+                    <strong>Cross River State - LGAs</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001</td>
+                  <td>Obanliku</td>
+                  <td>2020-07-14 17:18:27</td>
+                  <td class="text-right">
+                    <a
+                      href="{% url 'add-facility' %}"
+                      class="btn mb-2 btn-outline-danger"
+                    >
+                      <i class="fe fe-plus"></i>Add facility
+                    </a>
+                    <a
+                      href="{% url 'view-facilities' %}"
+                      type="button"
+                      class="btn mb-2 btn-outline-success"
+                    >
+                      <i class="fe fe-eye"></i>View facility
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <nav aria-label="Table Paging" class="mb-0 text-muted">
+              <ul class="pagination justify-content-end mb-0">
+                <li class="page-item">
+                  <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

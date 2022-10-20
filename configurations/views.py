@@ -9,3 +9,7 @@ def configurations(request):
 
 def standard(request):
     return render(request, 'configurations/standard.html', {})
+
+
+def dashboard(request):
+    return render(request, 'configurations/dashboard.html', {})

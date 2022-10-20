@@ -1,0 +1,97 @@
+{% extends 'layout/master.html' %} {% load static %} {% block body %}
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="page-title"><i class="fe fe-tool"></i>Add facility</h2>
+        <hr />
+      </div>
+      <div class="col-12">
+        <div class="card shadow">
+          <div class="card-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="facility_type">Facility Type</label>
+                  <select id="facility_type" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Primary Health Center</option>
+                    <option>Health Clinic</option>
+                    <option>Health Post</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress2"
+                  placeholder="Apartment, studio, or floor"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label>Year of facility construction</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="facility_type"
+                    >Number of buildings at health facility</label
+                  >
+                  <select id="facility_type" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label>Does the facility take inpatients?</label>
+                  <select id="facility_type" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Size of the catchment population</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="facility_type"
+                    >Operating days for the facility</label
+                  >
+                  <select id="facility_type" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Every day</option>
+                    <option>Week days only (Monday – Friday)</option>
+                    <option>Six days/week (Monday – Saturday)</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

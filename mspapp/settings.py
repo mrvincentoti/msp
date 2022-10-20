@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mspapp',
-    'configurations'
+    'configurations',
+    'managestate',
+    'analysis'
 ]
 
 MIDDLEWARE = [

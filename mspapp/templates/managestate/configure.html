@@ -1,0 +1,465 @@
+{% extends 'layout/master.html' %} {% load static %} {% block body %}
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="page-title">
+          <i class="fe fe-tool"></i>Evaluate - Obanliku
+        </h2>
+        <hr />
+      </div>
+      <div class="col-12">
+        <div class="card shadow">
+          <div class="card-body">
+            {% comment %}
+            <div class="toolbar row mb-3">
+              <div class="col"></div>
+              <div class="col ml-auto">
+                <div class="dropdown float-right">
+                  <button
+                    class="btn btn-primary float-right ml-3"
+                    type="button"
+                  >
+                    Add more +
+                  </button>
+                </div>
+              </div>
+            </div>
+            {% endcomment %}
+
+            <form>
+              <div class="row">
+                <div class="col-md-12">
+                  <h5>PART A: SERVICE AVAILABILITY</h5>
+                  <hr />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4"
+                    >Screening for non-communicable diseases?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes, full services</option>
+                    <option>Yes, partial services</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4"
+                    >Antenatal and newborn care (MNCH)</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4">Labor and delivery care</label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4"
+                    >STI prevention, testing, and/or counselling and
+                    treatment</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4"
+                    >HIV/AIDS testing, and counselling and treatment</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputEmail4"
+                    >Tuberculousis testing and treatment</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCity"
+                    >How many beds does this facility have?</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCity"
+                    >How many beds are dedicated maternity or delivery
+                    beds?</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCity"
+                    >How many of these beds are dedicated emergency beds</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <h5>PART B: STAFFING</h5>
+                  <hr />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >General medical doctors/Physicians - How many general
+                    medical doctors/physicians:</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Midwifery professionals - How many midwifery
+                    professionals</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Nursing professionals - How many nursing
+                    professionals</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Laboratory technicians/technologists - How many laboratory
+                    technicians/technologists:</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Pharmacists and dispensers - How many pharmacists or
+                    dispensers:</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Social workers - How many social workers:</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <p class="mb-2">
+                    <strong
+                      >Specialist clinicians – What types of specialist
+                      clinicians work at this facility?</strong
+                    >
+                  </p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Surgery
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      ENT (Otorhinolaryngology)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Gastroenterology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Gynaecology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Neurology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Nephrology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Rheumatology
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="defaultCheck1"
+                    />
+                    <label class="form-check-label" for="defaultCheck1">
+                      Psychiatry/Psychology
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <h5>PART C: INFRASTRUCTURE</h5>
+                  <hr />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >How many individual buildings are there within this health
+                    facility?</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >When were the last renovations of this building
+                    completed?</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a functioning mobile or landline phone at the
+                    facility?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a functioning computer at the facility?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there access to email/internet within the facility
+                    today?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a functioning computer at the facility?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a power supply at this health facility?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a functioning computer at the facility?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >What water sources are available at the facility?</label
+                  >
+                  <input type="number" class="form-control" id="inputCity" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Does the facility have a gated perimeter
+                  </label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Does the facility have a gated perimeter
+                  </label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Burn incinerator</option>
+                    <option>Open burning</option>
+                    <option>Dump without burning</option>
+                    <option>Remove off site</option>
+                    <option>Sharps pit</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >What types of toilets are available to patients at this
+                    health facility?
+                  </label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Flush toilet</option>
+                    <option>Ventilated improved pit latrine</option>
+                    <option>Pit latrine</option>
+                    <option>Composting toilet</option>
+                    <option>Bucket toilet</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >What it the total number of toilets available to patients
+                    at this health facility?
+                  </label>
+                  <input type="number" class="form-control" />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there a direct water supply to the main sets of toilets
+                    in the facility?
+                  </label>
+                  <input type="number" class="form-control" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCity">Type of roof structure</label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Wood</option>
+                    <option>Steel</option>
+                    <option>Bush sticks</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCity">Condition of roof structure?</label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputCity">Condition of roof sheeting?</label>
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Is there termite damage on roofing?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity"
+                    >Has the wood been treated against termites?</label
+                  >
+                  <select id="inputState" class="form-control">
+                    <option selected="">Choose...</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

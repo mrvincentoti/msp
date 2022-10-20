@@ -1,0 +1,56 @@
+{% extends 'layout/master.html' %} {% load static %} {% block body %}
+<main role="main" class="main-content">
+  <div class="container-fluid">
+    <div class="row align-items-center mb-2">
+      <div class="col">
+        <h2 class="page-title"><i class="fe fe-eye"></i>View Facilities</h2>
+        <hr />
+      </div>
+      <div class="col-12">
+        <div class="card shadow">
+          <div class="card-body">
+            <!-- table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr role="row">
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="group" class="bg-light">
+                  <td colspan="10">
+                    <strong>Obanliku - Facilities</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001</td>
+                  <td>Obanliku</td>
+                  <td>2020-07-14 17:18:27</td>
+                  <td class="text-right">
+                    <a
+                      href="{% url 'configure' %}"
+                      class="btn mb-2 btn-outline-danger"
+                    >
+                      <i class="fe fe-tool"></i>Setup
+                    </a>
+                    <a
+                      href=""
+                      type="button"
+                      class="btn mb-2 btn-outline-success"
+                    >
+                      <i class="fe fe-eye"></i>View facility
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}
