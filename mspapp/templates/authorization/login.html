@@ -2,7 +2,8 @@
 
 <div class="wrapper vh-100">
   <div class="row align-items-center h-100" style="margin: 0px !important">
-    <form class="col-lg-3 col-md-4 col-10 mx-auto text-center">
+    <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" id="formAuthentication" class="mb-3" action="{% url 'dashboard' %}" method="POST">
+      {% csrf_token %}
       <a
         class="navbar-brand mx-auto mt-2 flex-fill text-center"
         href="./index.html"
