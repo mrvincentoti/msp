@@ -510,6 +510,7 @@
               </form>
             </div>
           </div>
+          {% comment "" %}
           <div class="card shadow mb-4">
             <div class="card-header">
               <strong class="card-title">Horizontal form</strong>
@@ -616,6 +617,7 @@
                     </div>
                   </div>
                 </div>
+                
                 <div class="form-group row">
                   <label class="col-sm-3" for="exampleFormControlTextarea1"
                     >Textarea</label
@@ -635,6 +637,85 @@
             </div>
           </div>
         </div>
+{% endcomment %}
+
+  <div class="card-deck">
+    <div class="card shadow mb-4">
+      <div class="card-header">
+        <strong>Baseline Manpower Resource</strong>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Number of JCHEW</label>
+              <input type="number" class="form-control" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Number SCHEW</label>
+              <input type="number" class="form-control" min="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Minimum JCHEW Operating Hours</label>
+            <input type="number" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Minimum SCHEW Operating Hours</label>
+            <input type="number" class="form-control" />
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header">
+        
+          <strong>Baseline Equipment configurations</strong>
+        </div>
+        <div class="card-body">
+          <form>
+            
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>beds</label>
+                <input type="number" class="form-control" />
+              </div>
+              <div class="form-group col-md-4">
+                <label>Strechers</label>
+                <input type="number" class="form-control" />
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label>Wheel chairs</label>
+                <input type="number" class="form-control" />
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>Oxygen tanks</label>
+                <input type="number" class="form-control" />
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label>Air Conditioners</label>
+                <input type="number" class="form-control" />
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label>Ambulance</label>
+                <input type="number" class="form-control" />
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+  </div>
+  
+  {% comment "" %}
         <!-- / .card-desk-->
         <div class="row">
           <div class="col-md-12">
@@ -785,6 +866,7 @@
     <!-- .row -->
   </div>
   <!-- .container-fluid -->
+  {% endcomment %}
   <div
     class="modal fade modal-notif modal-slide"
     tabindex="-1"
