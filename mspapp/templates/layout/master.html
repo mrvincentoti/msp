@@ -68,7 +68,7 @@
       disabled
     />
   </head>
-  <body class="vertical light">
+  <body class="vertical light collapsed">
     <div class="wrapper">
       {% include "layout/topnav.html" %} {% include "layout/sidebar.html" %}
       {%block body %} {% endblock %}
@@ -295,6 +295,23 @@
     <script src="{% static 'authorization/js/dropzone.min.js' %}"></script>
     <script src="{% static 'authorization/js/uppy.min.js' %}"></script>
     <script src="{% static 'authorization/js/quill.min.js' %}"></script>
+    <script src="{% static 'authorization/js/msp.js' %}"></script>
+
+    <script
+      src="{% static 'authorization/js/anychart-core.min.js' %}"
+      type="text/javascript"
+    ></script>
+    <script src="{% static 'authorization/js/anychart-base.min.js' %}"></script>
+    <script src="{% static 'authorization/js/anychart-cartesian.min.js' %}"></script>
+    <script
+      src="{% static 'authorization/js/anychart-map.min.js' %}"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="{% static 'authorization/js/nigeria.js' %}"></script>
+    <script src="{% static 'authorization/js/statedata.js' %}"></script>
+    <script src="{% static 'authorization/js/msp-map.js' %}"></script>
+
     <script>
       $("#inlineFormCustomSelectPref").change(function () {
         document.getElementById("takai").style.display = "block";
